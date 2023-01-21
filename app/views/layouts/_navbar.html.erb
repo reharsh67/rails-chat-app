@@ -5,7 +5,11 @@
   </a>
   <div class="right  menu">
     <div class="item">
+    <% if logged_in? %>
+        <%= link_to "Logout", logout_path, class: "ui primary button", method: :delete %>
+    <% else %>
         <%= link_to "Login", login_path, class: "ui primary button" %>
+    <% end %>
     </div>
   </div>
 </div>
