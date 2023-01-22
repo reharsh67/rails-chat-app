@@ -14,12 +14,12 @@ class SessionsController < ApplicationController
       flash.now[:error] = "wrong login details"
       render "new"
     end
+  end
 
-    def destroy
-      session[:user_id] = nil
-      flash[:success] = "Logout sucessfuly"
-      redirect_to login_path
-    end
+  def destroy
+    session[:user_id] = nil
+    flash[:success] = "Logout sucessfuly"
+    redirect_to login_path
   end
 
   private
